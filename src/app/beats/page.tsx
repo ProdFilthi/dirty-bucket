@@ -6,7 +6,7 @@ import { GoDotFill } from "react-icons/go";
 const page = () => {
   return (
     <div>
-      <h1 className="text-6xl pb-12 text-center">Beats Collections</h1>
+      <h1 className="text-6xl pb-12 text-center">Beats Collection</h1>
       <div className="flex flex-wrap gap-4 items-center justify-center">
         {BeatsData.map((beat) => (
           <div

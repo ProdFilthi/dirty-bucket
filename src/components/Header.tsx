@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
+import { TbShoppingBagPlus } from "react-icons/tb";
 
 const navLinks = [
   {
@@ -21,6 +22,10 @@ const navLinks = [
   {
     label: "Drum Kits",
     href: "/drum-kits",
+  },
+  {
+    label: "Pricing",
+    href: "/pricing",
   },
 ];
 
@@ -62,6 +67,13 @@ const Header = () => {
             </Link>
           ))}
         </ul>
+        <Link
+          href="/cart"
+          className="flex items-center justify-center space-x-2"
+        >
+          <span>Cart</span>
+          <TbShoppingBagPlus />
+        </Link>
       </nav>
     </header>
   );
