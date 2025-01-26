@@ -1,7 +1,7 @@
 import React from "react";
 
 const page = () => {
-  return <div>This is the upload page</div>;
+  return <div className="text-6xl pb-12 text-center">Uploads</div>;
 };
 
 export default page;
