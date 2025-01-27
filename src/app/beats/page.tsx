@@ -61,14 +61,14 @@ const Page = () => {
             </div>
             <div className="leading-10">
               <h1 className="font-bold text-[18px]">{beat.Title}</h1>
-              <div className="flex space-x-2 items-center">
+              <div className="flex space-x-2 items-center mt-2">
                 <p>{beat.Bpm}</p>
                 <GoDotFill className="text-[10px]" />
                 <p>{beat.Key}</p>
               </div>
               <button
                 type="button"
-                className="bg-green-500 w-24 h-10 cursor-pointer active:opacity-75 rounded-md mt-2"
+                className="bg-green-500 w-24 h-10 cursor-pointer active:opacity-75 rounded-md mt-6"
               >
                 {beat.Price}
               </button>
