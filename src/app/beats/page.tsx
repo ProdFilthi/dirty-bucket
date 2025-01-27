@@ -36,7 +36,7 @@ const Page = () => {
         {BeatsData.map((beat) => (
           <div
             key={beat.id}
-            className="relative flex space-x-8 w-[350px] h-[200px] p-4 items-center rounded-lg border border-neutral-500 hover:bg-neutral-700 transition-all cursor-pointer"
+            className="relative flex space-x-8 w-[350px] h-[200px] p-4 items-center rounded-lg border border-neutral-500 hover:bg-neutral-800 transition-all cursor-pointer"
           >
             <div className="relative group">
               <Image
@@ -44,12 +44,12 @@ const Page = () => {
                 alt={beat.Title}
                 width={150}
                 height={150}
-                className="rounded-md"
+                className="rounded-md z-0"
               />
               <button
                 type="button"
                 onClick={() => togglePlay(beat.id)}
-                className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 hover:bg-opacity-50 rounded-md transition opacity-0 group-hover:opacity-100"
+                className="absolute inset-0 flex items-center justify-center bg-black/50 hover:bg-black/60 rounded-md transition-opacity opacity-0 group-hover:opacity-100 cursor-pointer z-10"
               >
                 {playingId === beat.id ? (
                   <Pause className="text-white w-10 h-10" />
@@ -68,7 +68,7 @@ const Page = () => {
               </div>
               <button
                 type="button"
-                className="bg-green-500 w-24 h-10 rounded-md mt-2"
+                className="bg-green-500 w-24 h-10 cursor-pointer active:opacity-75 rounded-md mt-2"
               >
                 {beat.Price}
               </button>

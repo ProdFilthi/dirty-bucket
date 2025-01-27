@@ -69,7 +69,11 @@ const Header = () => {
         </ul>
         <Link
           href="/cart"
-          className="flex items-center justify-center space-x-2"
+          className={`flex items-center justify-center space-x-2 ${
+            currentPath === "/cart"
+              ? "text-green-400"
+              : "text-neutral-300 hover:text-green-400"
+          } transition-all}`}
         >
           <span>Cart</span>
           <TbShoppingBagPlus />
