@@ -32,7 +32,7 @@ const navLinks = [
 const Header = () => {
   const currentPath = usePathname();
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 border-b border-neutral-700 bg-neutral-900 px-20">
+    <header className="fixed top-0 left-0 right-0 z-40 border-b border-neutral-700 bg-neutral-900 px-28">
       <nav className="flex items-center justify-between">
         <div className="flex items-center space-x-2 text-[14px]">
           <Image

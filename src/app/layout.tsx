@@ -40,7 +40,7 @@ export default function RootLayout({
             <header>
               <Header />
               <SignedOut>
-                <div className="fixed top-0 right-0 z-50 pt-[14px] px-3">
+                <div className="fixed top-0 right-0 z-50 pt-[14px] px-8">
                   <SignInButton />
                 </div>
               </SignedOut>
