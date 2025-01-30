@@ -34,7 +34,7 @@ export const pricingPlan: PricingPlan[] = [
   },
   {
     id: 3,
-    title: "Pro",
+    title: "Professional",
     monthlyPlan: 15, // 13.5 on discount
     yearlyPlan: 180, // 162 on discount
     features: [
