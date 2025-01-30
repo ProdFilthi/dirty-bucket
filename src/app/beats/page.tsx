@@ -1,10 +1,11 @@
 "use client";
 
-import { BeatsData } from "@/components/BeatsData";
+import { BeatsData } from "@/Lib/BeatsData";
 import Image from "next/image";
 import React, { useState } from "react";
 import { GoDotFill } from "react-icons/go";
 import { Play, Pause } from "lucide-react";
+import { FaMagnifyingGlass } from "react-icons/fa6";
 
 const Page = () => {
   const [playingId, setPlayingId] = useState<number | null>(null);
@@ -31,7 +32,32 @@ const Page = () => {
 
   return (
     <div>
-      <h1 className="text-6xl pb-12 text-center">Beats Collection</h1>
+      <div className="flex items-center justify-center flex-col">
+        <h1 className="text-4xl pb-12 text-center">Beats Collection</h1>
+        <form
+          className="flex items-center px-4 mb-12 bg-neutral-600 border border-neutral-500 hover:border-neutral-400 py-4 rounded-lg w-[600px]"
+          onSubmit={(e) => {
+            e.preventDefault(); // Prevent form from reloading the page
+            const formData = new FormData(e.currentTarget);
+            const searchQuery = formData.get("search");
+            console.log("Search Query:", searchQuery); // Replace with your logic
+          }}
+        >
+          <FaMagnifyingGlass className="text-neutral-400 mr-3" />
+          <input
+            type="text"
+            name="search"
+            placeholder="Search beats..."
+            className="flex-1 bg-transparent border-none text-white placeholder-neutral-400 focus:outline-none"
+          />
+          <button
+            type="submit"
+            className="ml-3 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 active:opacity-75 cursor-pointer"
+          >
+            Search
+          </button>
+        </form>
+      </div>
       <div className="flex flex-wrap gap-4 items-center justify-center">
         {BeatsData.map((beat) => (
           <div
@@ -68,7 +94,7 @@ const Page = () => {
               </div>
               <button
                 type="button"
-                className="bg-green-500 w-24 h-10 cursor-pointer active:opacity-75 rounded-md mt-6"
+                className="bg-green-500 w-30 h-10 cursor-pointer active:opacity-75 rounded-md mt-6"
               >
                 {beat.Price}
               </button>
