@@ -20,10 +20,6 @@ const navLinks = [
     href: "/beats",
   },
   {
-    label: "Drum Kits",
-    href: "/drum-kits",
-  },
-  {
     label: "Pricing",
     href: "/pricing",
   },
