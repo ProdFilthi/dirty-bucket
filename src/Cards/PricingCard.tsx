@@ -1,5 +1,6 @@
 "use client";
 import { pricingPlan } from "@/Lib/PricingData";
+import PurchaseBtn from "@/Lib/PurchaseBtn";
 import { usePricingStore } from "@/store/Store";
 
 const PricingCard = () => {
@@ -9,7 +10,7 @@ const PricingCard = () => {
       {pricingPlan.map((plan) => (
         <div
           key={plan.id}
-          className="flex items-start pt-4 justify-center w-[380px] h-[520px] mx-auto border-neutral-700 border rounded-lg cursor-pointer"
+          className="flex items-start pt-4 justify-center w-[380px] h-[700px] mx-auto border-neutral-700 border rounded-lg cursor-pointer"
         >
           <div className="flex flex-col">
             <h1 className="text-center text-4xl font-bold">{plan.title}</h1>
@@ -24,6 +25,7 @@ const PricingCard = () => {
                 </span>
               </div>
             </div>
+            <PurchaseBtn tier={plan.title} />
             <div className="flex items-start flex-col leading-12 mx-4 text-sm">
               {plan.features.map((feature, index) => (
                 <div key={index} className="flex items-center gap-2">
