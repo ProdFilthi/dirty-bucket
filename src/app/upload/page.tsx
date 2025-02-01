@@ -1,5 +1,3 @@
-"use client";
-import React from "react";
 import { toast } from "sonner";
 
 const page = () => {
@@ -7,16 +5,40 @@ const page = () => {
     <div className="flex items-center justify-center flex-col">
       <h1 className="text-6xl mt-4 pb-16 text-center">Uploads</h1>
       <div className="flex items-center justify-center gap-4">
-        <div className="w-[400px] h-32 hover:bg-neutral-700 my-4 cursor-pointer transition-all flex items-center justify-center rounded-lg border-neutral-500 border-dotted border">
+        <div className="w-[400px] h-32 hover:bg-neutral-800 my-4 cursor-pointer transition-all flex items-center justify-center rounded-lg border-neutral-500 border-dotted border">
           <div className="flex items-center justify-center flex-col leading-6 text-[12px]">
             <span>Drag & Drop Here</span>
             <span className="opacity-40">Wav & Mp3</span>
+            <input
+              type="file"
+              className="hidden"
+              accept=".wav,.mp3"
+              id="fileinput"
+            />
+            <label
+              className="text-green-500 cursor-pointer"
+              htmlFor="fileinput"
+            >
+              Click to upload
+            </label>
           </div>
         </div>
-        <div className="w-40 h-32 hover:bg-neutral-700 cursor-pointer transition-all flex items-center justify-center rounded-lg border-neutral-500 border-dotted border">
+        <div className="w-40 h-32 hover:bg-neutral-800 cursor-pointer transition-all flex items-center justify-center rounded-lg border-neutral-500 border-dotted border">
           <div className="flex items-center justify-center flex-col leading-6 text-[12px]">
             <span>Drag & Drop Here</span>
             <span className="opacity-40">Drop Your Image Here</span>
+            <input
+              type="file"
+              className="hidden"
+              accept=".png,.jpg"
+              id="fileinput"
+            />
+            <label
+              className="text-green-500 cursor-pointer"
+              htmlFor="fileinput"
+            >
+              Click to upload
+            </label>
           </div>
         </div>
       </div>
