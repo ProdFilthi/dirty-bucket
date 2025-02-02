@@ -1,46 +1,16 @@
-import { toast } from "sonner";
+"use client";
+
+import AudioUploader from "@/Lib/uploader/AudioUploader";
+import ImageUploader from "@/Lib/uploader/ImageUploader";
+import UploadBtn from "@/Lib/uploader/uploadBtn";
 
 const page = () => {
   return (
     <div className="flex items-center justify-center flex-col">
       <h1 className="text-6xl mt-4 pb-16 text-center">Uploads</h1>
       <div className="flex items-center justify-center gap-4">
-        <div className="w-[400px] h-32 hover:bg-neutral-800 my-4 cursor-pointer transition-all flex items-center justify-center rounded-lg border-neutral-500 border-dotted border">
-          <div className="flex items-center justify-center flex-col leading-6 text-[12px]">
-            <span>Drag & Drop Here</span>
-            <span className="opacity-40">Wav & Mp3</span>
-            <input
-              type="file"
-              className="hidden"
-              accept=".wav,.mp3"
-              id="fileinput"
-            />
-            <label
-              className="text-green-500 cursor-pointer"
-              htmlFor="fileinput"
-            >
-              Click to upload
-            </label>
-          </div>
-        </div>
-        <div className="w-40 h-32 hover:bg-neutral-800 cursor-pointer transition-all flex items-center justify-center rounded-lg border-neutral-500 border-dotted border">
-          <div className="flex items-center justify-center flex-col leading-6 text-[12px]">
-            <span>Drag & Drop Here</span>
-            <span className="opacity-40">Drop Your Image Here</span>
-            <input
-              type="file"
-              className="hidden"
-              accept=".png,.jpg"
-              id="fileinput"
-            />
-            <label
-              className="text-green-500 cursor-pointer"
-              htmlFor="fileinput"
-            >
-              Click to upload
-            </label>
-          </div>
-        </div>
+        <AudioUploader />
+        <ImageUploader />
       </div>
       <div>
         <h1 className="text-center py-8 text-2xl">Beat Metadata</h1>
@@ -67,15 +37,7 @@ const page = () => {
             type="text"
             placeholder="Price: $"
           />
-          <button
-            className="bg-green-500 w-32 h-12 rounded-lg mt-2 cursor-pointer active:opacity-75"
-            type="button"
-            onClick={() =>
-              toast.success("Your Beat has been uploaded successfully!")
-            }
-          >
-            Upload
-          </button>
+          <UploadBtn />
         </form>
       </div>
     </div>
